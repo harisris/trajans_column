@@ -1,8 +1,6 @@
 import sys
 import os
 
-
-
 def check_comic(path):
     if path.endswith('.cbz') or path.endswith('.cbr'):
         return True

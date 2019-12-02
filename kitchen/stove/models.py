@@ -1,7 +1,10 @@
-from app import db
+from kitchen import db
 volume_comics = db.Table('volumecomics',
 			db.Column('comic_id', db.Integer, db.ForeignKey('comic.id'), primary_key=True),
                         db.Column('volume_id', db.Integer, db.ForeignKey('volume.id'), primary_key=True))
+story_arc_comics = db.Table('arccomics',
+                            db.Column('story_arc_id', db.Integer, db.ForeignKey('story_arc.id'), primary_key=True),
+                            db.Column('comic_id', db.Integer, db.ForeignKey('comic.id'), primary_key=True))
 
 
 class Comic(db.Model):
@@ -28,6 +31,11 @@ class Comic(db.Model):
     comicvine_site_detail_url = db.Column(db.String)
     local_path = db.Column(db.String)
     local_image_path = db.Column(db.String)
+    story_arcs = db.relationship("Story Arc",
+                                secondary=story_arc_comics,
+                                lazy='subquery',
+                                backref=db.backref("comics"),
+                                collection_class=set)
 
 class Volume(db.Model):
 #    __tablename__ = 'volume'
@@ -59,3 +67,18 @@ class Volume(db.Model):
                     lazy='subquery',
                     backref=db.backref("volumes"),
                     collection_class=set)
+
+class Story_Arc(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    aliases = db.Column(db.String)
+    api_detail_url = db.Column(db.String)
+    date_added = db.Column(db.String)
+    date_last_updated = db.Column(db.String)
+    deck = db.Column(db.String)
+    description = db.Column(db.String)
+    episodes = db.Column(db.String)
+    count_of_issue_appearances = db.Column(db.String)
+    name = db.Column(db.String)
+    publisher = db.Column(db.String)
+    comicvine_site_detail_url = db.Column(db.String)
+

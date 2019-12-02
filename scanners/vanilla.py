@@ -21,13 +21,13 @@ class Vanilla:
                 for collection in self.collection_types:
                     if collection in each.name:
                         if each.parent.name not in self.directory_dict:
-                            self.directory_dict[each.parent.name] = {collection.lower() : {'path' : [each], 'assets_in_folder' : folddict[each]}}
+                            self.directory_dict[each.parent.name] = {collection.lower() : {'path' : [each], 'paths_in_folder' : folddict[each]}}
                         else:
                             if collection.lower() not in self.directory_dict[each.parent.name]:
-                                self.directory_dict[each.parent.name].update({collection.lower() : {'path' : [each], 'assets_in_folder' : folddict[each]}})
+                                self.directory_dict[each.parent.name].update({collection.lower() : {'path' : [each], 'paths_in_folder' : folddict[each]}})
                             else:
                                 #Check here for diffs (Next version update)
                                 self.directory_dict[each.parent.name][collection.lower()]['path'].append(each)
             else:
-                self.directory_dict[each.name] = {'issues' : {'path' : each, 'assets_in_folder' : folddict[each]}}
+                self.directory_dict[each.name] = {'issues' : {'path' : each, 'paths_in_folder' : folddict[each]}}
         return(self.directory_dict)
