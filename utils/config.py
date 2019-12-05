@@ -38,7 +38,7 @@ def main(api_key, email_id):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = 'Wrapper Function to add Comic Vine API Key. (You can generate it from the website.)')
-    parser.add_argument('email_id', help='Email ID used fro registering in Comicvine.', required=True)
+    parser.add_argument('email_id', help='Email ID used for registering in Comicvine.', required=True)
     parser.add_argument('api_key', help='ComicVine API Key', required=True)
     args = parser.parse_args()
     main(args.api_key, args.email_id)

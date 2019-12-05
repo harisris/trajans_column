@@ -7,6 +7,7 @@ def check_comic(path):
     else:
         return False
 
+#Some help from https://stackoverflow.com/questions/23294658/asking-the-user-for-input-until-they-give-a-valid-response
 def sanitised_input(prompt, type_=None, min_=None, max_=None, range_=None):
     if min_ is not None and max_ is not None and max_ < min_:
         raise ValueError("min_ must be less than or equal to max_.")
