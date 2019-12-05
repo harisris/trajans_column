@@ -2,7 +2,7 @@
 (Name still in working, but apparently the first visual narratives were found in [Trajan's Column](https://en.wikipedia.org/wiki/History_of_comics))
 
 
-Another simple Python based management tool to organise comics, retrieve metadata from Comicvine, and host it as a Flask server. The whole tool is focussed on being modular where one can use their own custom directory scanners, file name parsers, and database access tool. So in theory it can be extended for any kind of data. A vanilla version is also provided using regex expressions. Flask-SQLAlchemy is being used for ORM, and Flask itself will provide the REST APIs.
+Another simple Python based management tool to organise comics, retrieve metadata from Comicvine, and host it as a Flask server. The whole tool is focussed on being modular where one can use their own custom directory scanners, file name parsers, and database access. So in theory it can be extended for any kind of data. A vanilla version is also provided using regex expressions. Flask-SQLAlchemy is being used for ORM, and Flask itself will provide the REST APIs.
 
 Still at it's infancy, and has a long way to go to come close to the likes of Calibre and Plex.
 
