@@ -5,9 +5,9 @@ Another simple Python based management tool to organise comics, retrieve metadat
 Still at it's infancy, and has a long way to go to come close to the likes of Calibre and Plex.
 
 Project roadmap :
--[] A properly functioning Flask server to begin with (Duh.)
--[] Security aspects. (A bit of noob here, but we'll see.)
--[] GUI. (For both server side, and client side. The server side involves library generation, matching UI, a neat way to show, story arcs.) For the first phase, the GUI is going to be built for MacOS environment, and a support reading app for iOS, because they are pretty.
+- [ ] A properly functioning Flask server to begin with (Duh.)
+- [ ] Security aspects. (A bit of noob here, but we'll see.)
+- [ ] GUI. (For both server side, and client side. The server side involves library generation, matching UI, a neat way to show, story arcs.) For the first phase, the GUI is going to be built for MacOS environment, and a support reading app for iOS, because they are pretty.
 
 Credits to jessebraham/comicvine-search for the comicvine search code. 
 
